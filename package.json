@@ -14,7 +14,7 @@
   "main": "speech.js",
   
   "scripts": {
-    "test": "mocha"
+    "install": "node-gyp configure build"
   },
   
   "repository": {
