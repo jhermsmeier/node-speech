@@ -1,0 +1,29 @@
+{
+  
+  "name": "speech",
+  "version": "0.0.0",
+  "description": "Speech recognition and text-to-speech (TTS)",
+  "license": "MIT",
+  
+  "author": {
+    "name": "Jonas Hermsmeier",
+    "email": "jhermsmeier@googlemail.com",
+    "url": "http://jhermsmeier.de"
+  },
+  
+  "main": "speech.js",
+  
+  "scripts": {
+    "test": "mocha"
+  },
+  
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jhermsmeier/node-speech.git"
+  },
+  
+  "bugs": {
+    "url": "https://github.com/jhermsmeier/node-speech/issues"
+  }
+  
+}
