@@ -1,12 +1,16 @@
 
-var speech = global.speech = {
+var Speech = global.speech = {
+  
+  distance: {
+    levenshtein: require( './lib/distance/levenshtein' )
+  },
   
   TfIdf: require( './lib/tf-idf' ),
   
   // C++ Bindings
-  recognition: { /* not implemented */ },
-  tts: { /* not implemented */ },
+  Recognition: { /* not implemented */ },
+  TTS: { /* not implemented */ },
   
 }
 
-module.exports = speech
+module.exports = Speech
