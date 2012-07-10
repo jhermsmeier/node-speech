@@ -2,7 +2,8 @@
 var Speech = global.speech = {
   
   distance: {
-    levenshtein: require( './lib/distance/levenshtein' )
+    levenshtein: require( './lib/distance/levenshtein' ),
+    dice:        require( './lib/distance/dice' )
   },
   
   TfIdf: require( './lib/tf-idf' ),
