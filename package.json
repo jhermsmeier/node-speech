@@ -2,7 +2,7 @@
   
   "name": "speech",
   "version": "0.0.0",
-  "description": "Speech recognition and text-to-speech (TTS)",
+  "description": "Speech / Language tools",
   "license": "MIT",
   
   "author": {
