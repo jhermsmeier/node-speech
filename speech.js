@@ -3,6 +3,7 @@ module.exports = {
   
   distance: {
     sift:         require( './lib/distance/sift' ),
+    hamming:      require( './lib/distance/hamming' ),
     levenshtein:  require( './lib/distance/levenshtein' ),
     dice:         require( './lib/distance/dice' ),
     jaro:         require( './lib/distance/jaro' ),
