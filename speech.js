@@ -10,6 +10,10 @@ module.exports = {
     jaro_winkler: require( './lib/distance/jaro-winkler' ),
   },
   
+  phonetics: {
+    soundex: require( './lib/phonetics/soundex' ),
+  },
+  
   TfIdf: require( './lib/tf-idf' ),
   
   Syntax: {
