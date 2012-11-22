@@ -11,7 +11,8 @@ module.exports = {
   },
   
   phonetics: {
-    soundex: require( './lib/phonetics/soundex' ),
+    soundex:    require( './lib/phonetics/soundex' ),
+    caverphone: require( './lib/phonetics/caverphone' ),
   },
   
   TfIdf: require( './lib/tf-idf' ),
