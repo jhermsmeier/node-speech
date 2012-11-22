@@ -2,6 +2,7 @@
 module.exports = {
   
   distance: {
+    sift:         require( './lib/distance/sift' ),
     levenshtein:  require( './lib/distance/levenshtein' ),
     dice:         require( './lib/distance/dice' ),
     jaro:         require( './lib/distance/jaro' ),
@@ -11,7 +12,7 @@ module.exports = {
   TfIdf: require( './lib/tf-idf' ),
   
   Syntax: {
-    Learner: require( './lib/learner' )
+    /* Learner: require( './lib/learner' ) */
   },
   
   // C++ Bindings
