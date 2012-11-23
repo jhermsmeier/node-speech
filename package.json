@@ -22,8 +22,7 @@
   },
   
   "scripts": {
-    "test": "mocha",
-    "install": "node-gyp configure build"
+    "test": "make test"
   },
   
   "devDependencies": {
