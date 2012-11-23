@@ -1,6 +1,7 @@
 {
   
   "name": "speech",
+  "main": "speech.js",
   "version": "0.0.0",
   "description": "Speech / Language tools",
   "license": "MIT",
@@ -11,12 +12,6 @@
     "url": "http://jhermsmeier.de"
   },
   
-  "main": "speech.js",
-  
-  "scripts": {
-    "install": "node-gyp configure build"
-  },
-  
   "repository": {
     "type": "git",
     "url": "git://github.com/jhermsmeier/node-speech.git"
@@ -24,6 +19,16 @@
   
   "bugs": {
     "url": "https://github.com/jhermsmeier/node-speech/issues"
+  },
+  
+  "scripts": {
+    "test": "mocha",
+    "install": "node-gyp configure build"
+  },
+  
+  "devDependencies": {
+    "mocha": "*",
+    "benchmark": "*"
   }
   
 }
