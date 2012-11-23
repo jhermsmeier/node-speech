@@ -1,3 +1,3 @@
 --require assert
---reporter spec
+--reporter min
 --ui exports
