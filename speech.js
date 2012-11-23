@@ -17,12 +17,4 @@ module.exports = {
   
   TfIdf: require( './lib/tf-idf' ),
   
-  Syntax: {
-    /* Learner: require( './lib/learner' ) */
-  },
-  
-  // C++ Bindings
-  Recognition: { /* not implemented */ },
-  TTS: { /* not implemented */ },
-  
 }
