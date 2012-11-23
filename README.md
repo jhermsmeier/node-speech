@@ -1,4 +1,4 @@
-# Node.js Speech
+# Speech
 
 ## Install via [npm](http://npmjs.org)
 
