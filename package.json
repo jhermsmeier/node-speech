@@ -26,8 +26,8 @@
   },
   
   "devDependencies": {
-    "mocha": "~1.8",
-    "benchmark": "~1.0"
+    "mocha": "",
+    "benchmark": ""
   }
   
 }
