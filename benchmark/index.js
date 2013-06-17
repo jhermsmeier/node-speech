@@ -23,4 +23,7 @@ function run( module ) {
   
 }
 
-[ 'distance', 'phonetics' ].forEach( run )
+var argv = process.argv.slice( 2 )
+var modules = [ 'distance', 'phonetics' ]
+
+!( argv.length ? argv : modules ).forEach( run )
