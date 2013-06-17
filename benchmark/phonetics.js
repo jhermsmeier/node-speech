@@ -9,6 +9,10 @@ module.exports = {
     phonetics.soundex( A )
   },
   
+  Metaphone: function() {
+    phonetics.metaphone( A )
+  },
+  
   Caverphone: function() {
     phonetics.caverphone( A )
   },

@@ -13,6 +13,7 @@ module.exports = {
   phonetics: {
     soundex:    require( './lib/phonetics/soundex' ),
     caverphone: require( './lib/phonetics/caverphone' ),
+    metaphone:  require( './lib/phonetics/metaphone' ),
   },
   
   TfIdf: require( './lib/tf-idf' ),
