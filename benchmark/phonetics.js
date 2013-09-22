@@ -3,18 +3,18 @@ var phonetics = require( '../' ).phonetics
 
 const A = 'Dagobert'
 
-module.exports = {
+suite( function() {
   
-  Soundex: function() {
+  bench( 'Soundex', function() {
     phonetics.soundex( A )
-  },
+  })
   
-  Metaphone: function() {
+  bench( 'Metaphone', function() {
     phonetics.metaphone( A )
-  },
+  })
   
-  Caverphone: function() {
+  bench( 'Caverphone', function() {
     phonetics.caverphone( A )
-  },
+  })
   
-}
+})

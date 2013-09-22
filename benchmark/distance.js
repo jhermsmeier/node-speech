@@ -4,30 +4,30 @@ var distance = require( '../' ).distance
 const A = 'Dagobert Duck'
 const B = 'Dragobert Huk'
 
-module.exports = {
+suite( function() {
   
-  SIFT: function() {
+  bench( 'SIFT', function() {
     distance.sift( A, B )
-  },
+  })
   
-  Hamming: function() {
+  bench( 'Hamming', function() {
     distance.hamming( A, B )
-  },
+  })
   
-  Levenshtein: function() {
+  bench( 'Levenshtein', function() {
     distance.levenshtein( A, B )
-  },
+  })
   
-  Dice: function() {
+  bench( 'Dice', function() {
     distance.dice( A, B )
-  },
+  })
   
-  Jaro: function() {
+  bench( 'Jaro', function() {
     distance.jaro( A, B )
-  },
+  })
   
-  JaroWinkler: function() {
+  bench( 'JaroWinkler', function() {
     distance.jaro_winkler( A, B )
-  },
+  })
   
-}
+})
