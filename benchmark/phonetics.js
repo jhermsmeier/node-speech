@@ -3,7 +3,7 @@ var phonetics = require( '../' ).phonetics
 
 const A = 'Dagobert'
 
-suite( function() {
+suite( 'phonetics', function() {
   
   bench( 'Soundex', function() {
     phonetics.soundex( A )

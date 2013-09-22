@@ -4,7 +4,7 @@ var distance = require( '../' ).distance
 const A = 'Dagobert Duck'
 const B = 'Dragobert Huk'
 
-suite( function() {
+suite( 'distance', function() {
   
   bench( 'SIFT', function() {
     distance.sift( A, B )
