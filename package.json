@@ -1,14 +1,14 @@
 {
   
   "name": "speech",
-  "main": "speech.js",
-  "version": "0.0.0",
+  "main": "speech",
+  "version": "0.1.0",
   "description": "Speech / Language tools",
   "license": "MIT",
   
   "author": {
     "name": "Jonas Hermsmeier",
-    "email": "jhermsmeier@googlemail.com",
+    "email": "jhermsmeier@gmail.com",
     "url": "http://jhermsmeier.de"
   },
   
@@ -22,7 +22,7 @@
   },
   
   "scripts": {
-    "test": "mocha"
+    "test": "node node_modules/mocha/bin/mocha"
   },
   
   "devDependencies": {
