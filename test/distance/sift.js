@@ -1,6 +1,6 @@
 
 var assert = require( 'assert' )
-var sift = require( '../../lib/distance/sift' )
+var sift = require( '../../speech/distance/sift' )
 
 module.exports = {
   '': function() {}

@@ -1,6 +1,6 @@
 
 var assert = require( 'assert' )
-var hamming = require( '../../lib/distance/hamming' )
+var hamming = require( '../../speech/distance/hamming' )
 
 module.exports = {
   

@@ -1,6 +1,6 @@
 
 var assert = require( 'assert' )
-var winkler = require( '../../lib/distance/jaro-winkler' )
+var winkler = require( '../../speech/distance/jaro-winkler' )
 
 module.exports = {
   
