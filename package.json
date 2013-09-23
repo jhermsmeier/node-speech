@@ -23,7 +23,7 @@
   
   "scripts": {
     "test": "node node_modules/mocha/bin/mocha",
-    "benchmark": "node node_modules/matcha/bin/matcha",
+    "benchmark": "node node_modules/matcha/bin/matcha"
   },
   
   "devDependencies": {
