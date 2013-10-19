@@ -1,4 +1,23 @@
 
+function caverphone( s ) {
+  
+  var mutations = caverphone.patterns.length
+  
+  s = s.toLowerCase()
+  
+  for( var i = 0; i < mutations; i += 2 ) {
+    s = s.replace(
+      caverphone.patterns[i],
+      caverphone.replacements[i]
+    )
+  }
+  
+  return ( s + '1111111111' ).substring( 0, 10 )
+  
+}
+
+module.exports = caverphone
+
 caverphone.patterns = [
   // Remove non-alpha chars
   /[^a-z]/g,
@@ -118,22 +137,3 @@ caverphone.replacements = [
   // Removals
   '', 'A', ''
 ]
-
-function caverphone( s ) {
-  
-  var mutations = caverphone.patterns.length
-  
-  s = s.toLowerCase()
-  
-  for( var i = 0; i < mutations; i += 2 ) {
-    s = s.replace(
-      caverphone.patterns[i],
-      caverphone.replacements[i]
-    )
-  }
-  
-  return ( s + '1111111111' ).substring( 0, 10 )
-  
-}
-
-module.exports = caverphone
