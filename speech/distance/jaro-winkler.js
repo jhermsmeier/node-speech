@@ -21,10 +21,6 @@ var jaro = require( './jaro' )
  */
 function jaro_winkler( s1, s2, p ) {
   
-  // Normalize input
-  s1 = s1.toLowerCase()
-  s2 = s2.toLowerCase()
-  
   // `p` is a constant scaling factor for how much
   // the score is adjusted upwards for having common prefixes.
   // `p` should not exceed 0.25, otherwise the distance
