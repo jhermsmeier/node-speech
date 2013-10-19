@@ -11,12 +11,10 @@ function dice( source, target ) {
   var sources = dice.prepare( source )
   var targets = dice.prepare( target )
   
-  var intersection = 0
-  var union = sources.length + targets.length
-  
-  var i, k
+  var i, k, intersection = 0
   var source_count = sources.length
   var target_count = targets.length
+  var union = source_count + target_count
   
   for( i = 0; i < source_count; i++ ) {
     source = sources[i]
@@ -24,7 +22,7 @@ function dice( source, target ) {
       target = targets[k]
       if( source === target ) {
         intersection++
-        delete targets[k]
+        targets[k] = undefined
         break
       }
     }
@@ -44,7 +42,7 @@ dice.prepare = function( str ) {
   
   str = ( str + '' ).toLowerCase().trim()
   
-  var i, k, word, bigrams, bigram_count
+  var i, k, bigrams
   
   var words      = str.split( /\W+/ )
   var word_count = words.length
@@ -52,15 +50,11 @@ dice.prepare = function( str ) {
   
   for( i = 0; i < word_count; i++ ) {
     
-    word         = words[i]
-    bigram_count = word.length - 1
-    bigrams      = new Array( bigram_count )
+    bigrams = words[i].length - 1
     
-    for( k = 0; k < bigram_count; k++ ) {
-      bigrams[k] = word.substring( k, k + 2 )
+    for( k = 0; k < bigrams; k++ ) {
+      pairs.push( words[i].substring( k, k + 2 ) )
     }
-    
-    pairs = pairs.concat( bigrams )
     
   }
   
