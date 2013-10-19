@@ -37,10 +37,10 @@ function jaro_winkler( s1, s2, p ) {
   
   // `l` is the length of common prefix at the start
   // of the string up to a maximum of 4 characters
-  var l = 0
+  var i, l = 0
   var c = Math.min( s1.length, s2.length, 4 )
   
-  for( var i = 0; i < c; i++ ) {
+  for( i = 0; i < c; i++ ) {
     if( s1[i] === s2[i] ) { l++ }
   }
   
