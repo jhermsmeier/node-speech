@@ -15,15 +15,8 @@ function jaro( s1, s2 ) {
   var s1_length = s1.length
   var s2_length = s2.length
   
-  // Preallocating arrays w/ more than 64k elements
-  // switches them to dict mode in V8 (which is slower)
-  var m1 = s1_length < 0xFFFF
-    ? new Array( s1_length ) : new Array()
-  
-  var m2 = s2_length < 0xFFFF
-    ? new Array( s2_length ) : new Array()
-  
-  var m2_length = m2.length
+  var m1 = new Array( s1_length )
+  var m2 = new Array( s2_length )
   
   var range = Math.max( s1_length, s2_length )
       range = (( range / 2 ) - 1 ) | 0
@@ -58,8 +51,8 @@ function jaro( s1, s2 ) {
   
   for( i = 0, k = 0; i < s1_length; i++ ) {
     if( m1[k] ) {
-      while( !m2[k] && k < m2_length )       { k++ }
-      if( s1[i] !== s2[k] && k < m2_length ) { t++ }
+      while( !m2[k] && k < s2_length )       { k++ }
+      if( s1[i] !== s2[k] && k < s2_length ) { t++ }
       k++
     }
   }
