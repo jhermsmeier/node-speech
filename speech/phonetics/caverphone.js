@@ -1,79 +1,135 @@
 
-caverphone.transforms = [
+caverphone.patterns = [
   // Remove non-alpha chars
-  /[^a-z]/g,   '',
+  /[^a-z]/g,
   // Remove trailing 'e'
-  /e$/,        '',
+  /e$/,
   // Beginnings
-  /^cough/,    'cou2f',
-  /^rough/,    'rou2f',
-  /^tough/,    'tou2f',
-  /^enough/,   'enou2f',
-  /^trough/,   'trou2f',
-  /^gn/,       '2n',
+  /^cough/, /^rough/, /^tough/,
+  /^enough/, /^trough/, /^gn/,
   // Ending
-  /mb$/,       'm2',
+  /mb$/,
   // Replacements
-  /cq/g,       '2q',
-  /ci/g,       'si',
-  /ce/g,       'se',
-  /cy/g,       'sy',
-  /tch/g,      '2ch',
-  /c/g,        'k',
-  /q/g,        'k',
-  /x/g,        'k',
-  /v/g,        'f',
-  /dg/g,       '2g',
-  /tio/g,      'sio',
-  /tia/g,      'sia',
-  /d/g,        't',
-  /ph/g,       'fh',
-  /b/g,        'p',
-  /sh/g,       's2',
-  /z/g,        's',
-  /^[aeiou]/g, 'A',
-  /[aeiou]/g,  '3',
-  /j/g,        'y',
-  /^y3/,       'Y3',
-  /^y/,        'A',
-  /y/g,        '3',
-  /3gh3/g,     '3kh3',
-  /gh/g,       '22',
-  /g/g,        'k',
-  /s+/g,       'S',
-  /t+/g,       'T',
-  /p+/g,       'P',
-  /k+/g,       'K',
-  /f+/g,       'F',
-  /m+/g,       'M',
-  /n+/g,       'N',
-  /w3/g,       'W3',
-  /wh3/g,      'Wh3',
-  /w$/,        '3',
-  /w/g,        '2',
-  /^h/,        'A',
-  /h/g,        '2',
-  /r3/g,       'R3',
-  /r$/,        '3',
-  /r/g,        '2',
-  /l3/g,       'L3',
-  /l$/,        '3',
-  /l/g,        '2',
+  /cq/g,
+  /ci/g,
+  /ce/g,
+  /cy/g,
+  /tch/g,
+  /c/g,
+  /q/g,
+  /x/g,
+  /v/g,
+  /dg/g,
+  /tio/g,
+  /tia/g,
+  /d/g,
+  /ph/g,
+  /b/g,
+  /sh/g,
+  /z/g,
+  /^[aeiou]/g,
+  /[aeiou]/g,
+  /j/g,
+  /^y3/,
+  /^y/,
+  /y/g,
+  /3gh3/g,
+  /gh/g,
+  /g/g,
+  /s+/g,
+  /t+/g,
+  /p+/g,
+  /k+/g,
+  /f+/g,
+  /m+/g,
+  /n+/g,
+  /w3/g,
+  /wh3/g,
+  /w$/,
+  /w/g,
+  /^h/,
+  /h/g,
+  /r3/g,
+  /r$/,
+  /r/g,
+  /l3/g,
+  /l$/,
+  /l/g,
   // Removals
-  /2/g,        '',
-  /3$/,        'A',
-  /3/g,        ''
+  /2/g, /3$/, /3/g,
+]
+
+caverphone.replacements = [
+  // Remove non-alpha chars
+  '',
+  // Remove trailing 'e'
+  '',
+  // Beginnings
+  'cou2f', 'rou2f', 'tou2f',
+  'enou2f', 'trou2f', '2n',
+  // Ending
+  'm2',
+  // Replacements
+  '2q',
+  'si',
+  'se',
+  'sy',
+  '2ch',
+  'k',
+  'k',
+  'k',
+  'f',
+  '2g',
+  'sio',
+  'sia',
+  't',
+  'fh',
+  'p',
+  's2',
+  's',
+  'A',
+  '3',
+  'y',
+  'Y3',
+  'A',
+  '3',
+  '3kh3',
+  '22',
+  'k',
+  'S',
+  'T',
+  'P',
+  'K',
+  'F',
+  'M',
+  'N',
+  'W3',
+  'Wh3',
+  '3',
+  '2',
+  'A',
+  '2',
+  'R3',
+  '3',
+  '2',
+  'L3',
+  '3',
+  '2',
+  // Removals
+  '', 'A', ''
 ]
 
 function caverphone( s ) {
   
-  var transforms = caverphone.transforms
-  var mutations = transforms.length
+  var mutations = caverphone.patterns.length
   
   s = s.toLowerCase()
   
   for( var i = 0; i < mutations; i += 2 ) {
-    s = s.replace( transforms[i], transforms[ i + 1 ] )
+    s = s.replace(
+      caverphone.patterns[i],
+      caverphone.replacements[i]
+    )
   }
   
   return ( s + '1111111111' ).substring( 0, 10 )
