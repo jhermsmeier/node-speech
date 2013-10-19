@@ -17,11 +17,12 @@ function levenshtein( source, target ) {
   
   var i, k, matrix = []
   
-  for( i = 0; i <= t; i++ )
-    matrix[ i ] = [ i ]
+  for( i = 0; i <= t; i++ ) {
+    matrix[i] = [ i ]
+  }
   
   for( k = 0; k <= s; k++ )
-    matrix[0][ k ] = k
+    matrix[0][k] = k
   
   for( i = 1; i <= t; i++ ) {
     for( k = 1; k <= s; k++ ) {
