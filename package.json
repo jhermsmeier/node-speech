@@ -1,34 +1,30 @@
 {
-  
   "name": "speech",
-  "main": "speech",
   "version": "0.1.0",
   "description": "Speech / Language tools",
   "license": "MIT",
-  
+  "keywords": [],
+  "main": "lib/speech",
   "author": {
     "name": "Jonas Hermsmeier",
     "email": "jhermsmeier@gmail.com",
-    "url": "http://jhermsmeier.de"
+    "url": "https://jhermsmeier.de/"
   },
-  
+  "dependencies": {},
+  "devDependencies": {
+    "matcha": "~0.6.0",
+    "mocha": "~2.2.5"
+  },
+  "scripts": {
+    "test": "mocha",
+    "benchmark": "matcha"
+  },
+  "homepage": "https://github.com/jhermsmeier/node-speech",
   "repository": {
     "type": "git",
-    "url": "git://github.com/jhermsmeier/node-speech.git"
+    "url": "https://github.com/jhermsmeier/node-speech.git"
   },
-  
   "bugs": {
     "url": "https://github.com/jhermsmeier/node-speech/issues"
-  },
-  
-  "scripts": {
-    "test": "node node_modules/mocha/bin/mocha",
-    "benchmark": "node node_modules/matcha/bin/matcha"
-  },
-  
-  "devDependencies": {
-    "mocha": "",
-    "matcha": ""
   }
-  
 }

@@ -1,6 +1,6 @@
 
 var assert = require( 'assert' )
-var metaphone = require( '../../speech/phonetics/metaphone' )
+var metaphone = require( '../../lib/phonetics/metaphone' )
 
 module.exports = {
   

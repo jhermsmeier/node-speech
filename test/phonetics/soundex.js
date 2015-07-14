@@ -1,6 +1,6 @@
 
 var assert = require( 'assert' )
-var soundex = require( '../../speech/phonetics/soundex' )
+var soundex = require( '../../lib/phonetics/soundex' )
 
 module.exports = {
   'Soundex':     function() { assert.equal( soundex( 'Soundex' ), 's532' ) },

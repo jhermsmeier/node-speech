@@ -1,6 +1,6 @@
 
 var assert = require( 'assert' )
-var caverphone = require( '../../speech/phonetics/caverphone' )
+var caverphone = require( '../../lib/phonetics/caverphone' )
 
 module.exports = {
   'Stevenson': function() { assert.equal( caverphone( 'Stevenson' ), 'STFNSN1111' ) },

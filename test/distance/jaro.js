@@ -1,6 +1,6 @@
 
 var assert = require( 'assert' )
-var jaro = require( '../../speech/distance/jaro' )
+var jaro = require( '../../lib/distance/jaro' )
 
 module.exports = {
   

@@ -1,7 +1,10 @@
-# Speech [![build status](https://secure.travis-ci.org/jhermsmeier/node-speech.png)](http://travis-ci.org/jhermsmeier/node-speech)
+# Speech
+[![npm](http://img.shields.io/npm/v/speech.svg?style=flat-square)](https://npmjs.com/speech)
+[![npm downloads](http://img.shields.io/npm/dm/speech.svg?style=flat-square)](https://npmjs.com/speech)
+[![build status](http://img.shields.io/travis/jhermsmeier/node-speech.svg?style=flat-square)](https://travis-ci.org/jhermsmeier/node-speech)
 
-## Install via [npm](http://npmjs.org)
+## Install via [npm](https://npmjs.com)
 
-```
-npm install speech
+```sh
+$ npm install speech
 ```

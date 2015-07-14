@@ -1,7 +1,7 @@
 
 var assert = require( 'assert' )
-var levenshtein = require( '../../speech/distance/levenshtein' )
-var hamming = require( '../../speech/distance/hamming' )
+var levenshtein = require( '../../lib/distance/levenshtein' )
+var hamming = require( '../../lib/distance/hamming' )
 
 var spec = [
   [ 'a', 'b', 1 ],
