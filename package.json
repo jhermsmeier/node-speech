@@ -1,15 +1,11 @@
 {
   "name": "speech",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Speech / Language tools",
   "license": "MIT",
   "keywords": [],
   "main": "lib/speech",
-  "author": {
-    "name": "Jonas Hermsmeier",
-    "email": "jhermsmeier@gmail.com",
-    "url": "https://jhermsmeier.de/"
-  },
+  "author": "Jonas Hermsmeier <jhermsmeier@gmail.com> (https://jhermsmeier.de/)",
   "dependencies": {},
   "devDependencies": {
     "matcha": "~0.6.0",
@@ -22,9 +18,12 @@
   "homepage": "https://github.com/jhermsmeier/node-speech",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jhermsmeier/node-speech.git"
+    "url": "git+https://github.com/jhermsmeier/node-speech.git"
   },
   "bugs": {
     "url": "https://github.com/jhermsmeier/node-speech/issues"
+  },
+  "directories": {
+    "test": "test"
   }
 }
